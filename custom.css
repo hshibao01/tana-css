@@ -4,6 +4,10 @@ div[class*="WidgetPanel-module_container"]:has(
 ) {
 display: none !important;
 }
+/* 鼠标悬停时显示 */
+div[class*="WidgetPanel-module_container"]:hover {
+  display: block !important;
+}
 
 html:not(.mobile) .NodeAsListElement-module_el__Ej7SZ.NodeAsListElement-module_isTuple__MMJU5>.NodeAsListElement-module_wrapper__a1g94>.NodeAsListElement-module_main__wdQrJ {
     padding-top: 0rem !important;
@@ -32,3 +36,6 @@ body {
 [class*="NodeAsListElement-module_isSection"]:not(:has(+ [class*="NodeAsListElement-module_isSection"])){
     margin-bottom: .75rem !important;
 }
+
+
+
