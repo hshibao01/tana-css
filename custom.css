@@ -1,0 +1,34 @@
+/* RC: HIDE RELATED CONTENT IF IT'S A SEARCH NODE THAT RETURNS NO RESULTS per @blank */
+div[class*="WidgetPanel-module_container"]:has(
+[class*="Message-module_smaller"]
+) {
+display: none !important;
+}
+
+html:not(.mobile) .NodeAsListElement-module_el__Ej7SZ.NodeAsListElement-module_isTuple__MMJU5>.NodeAsListElement-module_wrapper__a1g94>.NodeAsListElement-module_main__wdQrJ {
+    padding-top: 0rem !important;
+    padding-bottom: 0rem !important;
+}
+
+.isDarkMode div#floatingTourTemplateChildrenContainer {
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #3b3b3b;
+}
+
+div#floatingTourTemplateChildrenContainer {
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #d8d6dd;
+}
+
+/* Example CSS - replace with your own */
+body {
+    font-family: '\''LXGW WenKai Screen R'\'';
+    -webkit-font-smoothing: subpixel-antialiased;
+    font-size: 14.5px !important;
+}
+/* FOR HEADER NODE LISTS, ADD A BOTTOM MARGIN THAT MATCHES THE TOP MARGINS TO THE LAST NODE SECTION IN THE LIST */
+[class*="NodeAsListElement-module_isSection"]:not(:has(+ [class*="NodeAsListElement-module_isSection"])){
+    margin-bottom: .75rem !important;
+}
