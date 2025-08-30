@@ -35,39 +35,22 @@ body {
 
 
 
-
-/* 找到包含所有分组的父容器 - 根据HTML结构定位 */
+/* 仅修改包含看板的父容器布局 */
 .tw-flex.tw-gap-7.tw-flex-col:has(> .GroupedListView-module_el__h47RL) {
-  display: flex;
-  flex-direction: row; /* 横向排列 */
-  flex-wrap: wrap; /* 超出宽度时自动换行 */
-  gap: 1.5rem; /* 看板之间的间距 */
-  padding: 1rem;
-  max-width: 100%;
-  overflow-x: auto; /* 确保在小屏幕上可以横向滚动 */
+  flex-direction: row; /* 改为横向排列 */
+  flex-wrap: wrap; /* 自动换行 */
+  overflow-x: auto; /* 横向滚动支持 */
 }
 
-/* 每个看板卡片的样式 */
+/* 确保看板项保持适当大小 */
 .GroupedListView-module_el__h47RL {
-  flex: 1;
-  min-width: 300px; /* 最小宽度，确保内容不拥挤 */
-  max-width: 400px; /* 最大宽度，防止过宽 */
-  background-color: #f9fafb;
-  border-radius: 8px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-  overflow: hidden;
+  min-width: 300px; /* 最小宽度 */
+  max-width: 400px; /* 最大宽度 */
+  flex: 1; /* 平均分配空间 */
 }
 
-/* 看板标题栏样式优化 */
-.GroupedListView-module_header__jeYx8 {
-  background-color: #f3f4f6;
-  padding: 0.75rem 1rem;
-  border-bottom: 1px solid #e5e7eb;
-}
-
-/* 每个任务项的容器样式 */
+/* 任务容器使用纵向排列 */
 .GroupedListView-module_el__h47RL > div:not(.GroupedListView-module_header__jeYx8) {
-  padding: 0.75rem;
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
