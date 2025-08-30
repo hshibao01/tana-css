@@ -32,19 +32,3 @@ body {
 [class*="NodeAsListElement-module_isSection"]:not(:has(+ [class*="NodeAsListElement-module_isSection"])){
     margin-bottom: .75rem !important;
 }
-
-
-/* 仅修改包含看板的父容器布局 */
-.tw-flex.tw-gap-7.tw-flex-col:has(> .GroupedListView-module_el__h47RL) {
-  flex-direction: row; /* 改为横向排列 */
-  flex-wrap: wrap; /* 自动换行 */
-  overflow-x: auto; /* 横向滚动支持 */
-}
-
-/* 确保看板项保持适当大小 */
-.GroupedListView-module_el__h47RL {
-  min-width: 300px; /* 最小宽度 */
-  max-width: 400px; /* 最大宽度 */
-  flex: 1; /* 平均分配空间 */
-}
-
