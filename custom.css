@@ -35,3 +35,54 @@ body {
 
 
 
+
+/* 找到包含所有分组的父容器 - 根据HTML结构定位 */
+.tw-flex.tw-gap-7.tw-flex-col:has(> .GroupedListView-module_el__h47RL) {
+  display: flex;
+  flex-direction: row; /* 横向排列 */
+  flex-wrap: wrap; /* 超出宽度时自动换行 */
+  gap: 1.5rem; /* 看板之间的间距 */
+  padding: 1rem;
+  max-width: 100%;
+  overflow-x: auto; /* 确保在小屏幕上可以横向滚动 */
+}
+
+/* 每个看板卡片的样式 */
+.GroupedListView-module_el__h47RL {
+  flex: 1;
+  min-width: 300px; /* 最小宽度，确保内容不拥挤 */
+  max-width: 400px; /* 最大宽度，防止过宽 */
+  background-color: #f9fafb;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+/* 看板标题栏样式优化 */
+.GroupedListView-module_header__jeYx8 {
+  background-color: #f3f4f6;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* 每个任务项的容器样式 */
+.GroupedListView-module_el__h47RL > div:not(.GroupedListView-module_header__jeYx8) {
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* 任务项样式优化 */
+.tw-flex.tw-gap-0 {
+  background-color: white;
+  border-radius: 4px;
+  padding: 0.75rem;
+  border: 1px solid #e5e7eb;
+  transition: all 0.2s ease;
+}
+
+.tw-flex.tw-gap-0:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  border-color: #d1d5db;
+}
