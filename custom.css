@@ -72,17 +72,3 @@ body {
   flex-direction: column;
   gap: 0.75rem;
 }
-
-/* 任务项样式优化 */
-.tw-flex.tw-gap-0 {
-  background-color: white;
-  border-radius: 4px;
-  padding: 0.75rem;
-  border: 1px solid #e5e7eb;
-  transition: all 0.2s ease;
-}
-
-.tw-flex.tw-gap-0:hover {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
-  border-color: #d1d5db;
-}
